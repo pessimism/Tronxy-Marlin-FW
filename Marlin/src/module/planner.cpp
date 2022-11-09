@@ -789,7 +789,7 @@ void Planner::calculate_trapezoid_for_block(block_t * const block, const_float_t
   NOLESS(initial_rate, uint32_t(MINIMAL_STEP_RATE));
   NOLESS(final_rate, uint32_t(MINIMAL_STEP_RATE));
 
-  #if ENABLED(S_CURVE_ACCELERATION)
+  #if EITHER(S_CURVE_ACCELERATION, LIN_ADVANCE)
     uint32_t cruise_rate = initial_rate;
   #endif
 
