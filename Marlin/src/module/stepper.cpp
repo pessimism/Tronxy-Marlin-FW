@@ -2036,7 +2036,7 @@ uint32_t Stepper::block_phase_isr() {
         // acc_step_rate is in steps/second
 
         // step_rate to timer interval and steps per stepper isr
-        interval = calc_timer_interval(step_rate << oversampling_factor, steps_per_isr);
+        interval = calc_timer_interval(acc_step_rate << oversampling_factor, steps_per_isr);
         acceleration_time += interval;
 
         #if ENABLED(LIN_ADVANCE)
@@ -2109,7 +2109,7 @@ uint32_t Stepper::block_phase_isr() {
         // step_rate is in steps/second
 
         // step_rate to timer interval and steps per stepper isr
-        interval = calc_timer_interval(step_rate, &steps_per_isr);
+        interval = calc_timer_interval(step_rate << oversampling_factor, steps_per_isr);
         deceleration_time += interval;
 
         #if ENABLED(LIN_ADVANCE)
