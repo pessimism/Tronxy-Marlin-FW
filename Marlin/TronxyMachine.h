@@ -34,7 +34,7 @@
 #define UI_SIM240X320      3
 #define UI_SIM320X480      4
 
-#define TRONXY_PROJ        PROJ_X5SA
+#define TRONXY_PROJ        PROJ_X5SA_PRO
 #define TRONXY_UI          UI_SIM480X320 //0:Marlin or 2:SIM480x320
 
 #if TRONXY_PROJ == PROJ_XY2_PRO
@@ -178,7 +178,7 @@
 #define LASER_SERIAL              1 //wifi端子用于激光PWM控制
 #define DUAL_ZMAX_HOME            0 //大端复位,向反方向复位,再回到正方向找0点
 #define Z_BED_MOVE                1 //Z轴移动:热床
-#define USE_EXTRUDER              1 //T,B TITAN:1,BMG:2,TAOLI:3,general:4
+#define USE_EXTRUDER              2 //T,B TITAN:1,BMG:2,TAOLI:3,general:4
 
 #elif TRONXY_PROJ == PROJ_X5SA400_PRO
 
